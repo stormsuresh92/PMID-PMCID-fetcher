@@ -41,7 +41,7 @@ with open('output.txt', 'a') as output_file:
         # Write to the output file
         output_file.write(f"{doi},{pmid},{pmc_id}\n")
 
-print("Processing complete. Data saved to 'data.txt'.")
+print("Processing complete. Data saved to 'output.txt'.")
     
 
 
