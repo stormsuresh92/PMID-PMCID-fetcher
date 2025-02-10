@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 from tqdm import tqdm
+from time import sleep
 
 # Headers for HTTP request
 headers = {
@@ -19,7 +20,7 @@ with open('output.csv', 'a') as output_file:
             # Request to PubMed
             response = requests.get(f'https://pubmed.ncbi.nlm.nih.gov/?term={doi}', headers=headers, timeout=10)
             response.raise_for_status()  # Raise an error for HTTP issues
-            
+            sleep(2)
             # Parse the response with BeautifulSoup
             soup = BeautifulSoup(response.content, 'html.parser')
 
