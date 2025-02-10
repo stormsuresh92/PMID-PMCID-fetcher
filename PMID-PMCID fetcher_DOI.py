@@ -12,7 +12,7 @@ with open('dois.txt', 'r') as file:
     dois = file.readlines()
 
 # Open the output file in append mode
-with open('output.txt', 'a') as output_file:
+with open('output.csv', 'a') as output_file:
     for doi in tqdm(dois):
         doi = doi.strip()
         try:
@@ -41,7 +41,7 @@ with open('output.txt', 'a') as output_file:
         # Write to the output file
         output_file.write(f"{doi},{pmid},{pmc_id}\n")
 
-print("Processing complete. Data saved to 'data.txt'.")
+print("Processing complete. Data saved to 'data.csv'.")
     
 
 
